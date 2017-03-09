@@ -8,7 +8,7 @@ WARNING:This captive portal actually works, but it's under development. There is
 
 I'm coding a jquery-mobile backend for administrate database.
 
-###FEATURES:
+###FEATURES
 - Mac address authentication for free limited-time wifi access;
 - Registered users authentication (support limited time login from single mac address only);
 - Remaining time counter for users (you can show them fake values, hiding minutes from 
@@ -19,7 +19,7 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ***
 
-##REQUIREMENTS:
+##REQUIREMENTS
 - Ubiquiti Unifi Controller (tested on 4.8.20 version)
 - Linux Debian or Windows Lamp (tested on Debian and Raspbian 8)
 - Nginx or Apache2 webserver with php enabled
@@ -29,29 +29,29 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ***
 
-###INSTALL: 
+###INSTALL 
 read INSTALL.txt file
 
 ***
 
-###LICENSE:
+###LICENSE
 This tool is released under MIT License
 
 ***
 
-###CREDITS:
+###CREDITS
 This Captive Portal is based on
 - Medoo (http://medoo.in/)
 - class.unifi.it (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
 
 ***
 
-###AUTHOR:
+###AUTHOR
 Emanuele Paiano - nixw0rm [at] gmail [dot] com
 
 ***
 
-###SUPPORT ME:
+###SUPPORT ME
 If you like this project, consider a little donation! I need buy hardware for testing and development :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/emanuelepaiano)
