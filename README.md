@@ -59,7 +59,7 @@ This Captive Portal is based on
 ***
 
 ###FUTURE RELEASES
-I'm working for mobile friendly backend and hotspot images runs on Raspberry Pi, X86 and Virtualbox. 
+I'm working for mobile friendly backend and hotspot images runs on Raspberry Pi. 
 
 ###AUTHOR
 Emanuele Paiano - nixw0rm [at] gmail [dot] com
