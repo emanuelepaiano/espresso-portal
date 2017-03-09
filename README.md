@@ -4,7 +4,7 @@ Works with Ubiquiti Unifi controller v4+
 
 ![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
 
-NOTE: This captive portal actually works, but it's under development. There isn't a database backend yet.
+NOTE: This captive portal actually works, but it's under development. There is a frontend only and
 I'm coding a jquery-mobile backend for administrate database.
 
 ####WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk, Install a logging system by yourself. I'm not responsible for law violations!
