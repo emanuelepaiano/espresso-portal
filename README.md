@@ -31,7 +31,16 @@ I'm coding a jquery-mobile backend for administrate database.
 ***
 
 ###INSTALL 
-read INSTALL.txt file (writing in progress)
+
+1) Prepare your system installing the unifi controller, a web server (Nginx/Apache) with PHP/PDO and a DBMS (Mysql or Sqlite3);
+
+2) Put guest/ directory into webserver root (like /var/www/html) and change permissions to access www-data webserver user;
+
+3) Copy guest/s/default/db/hotspot.sqlite to another path (like /var) inaccessible from webserver, but accessible from php;
+
+4) Edit guest/s/default/config.inc.php Unifi Controller options. Change $GLOBALS['sessionLogging'] with random string, unifi parametres ($GLOBALS['unifiServer'], $GLOBALS['unifiUser'] and $GLOBALS['unifiPass']).
+
+5) Edit guest/s/default/config.inc.php database options. If you use mysql, 
 
 ***
 
