@@ -38,12 +38,11 @@ I'm coding a jquery-mobile backend for administrate database.
 
 3) To increase security, move guest/s/default/db/hotspot.sqlite file to another path (like /var) inaccessible from web, but accessible from php;
 
-4) Edit guest/s/default/config.inc.php Unifi Controller options. Change $GLOBALS['sessionLogging'] with random string and unifi controller parametres like $GLOBALS['unifiServer'], $GLOBALS['unifiUser'] and $GLOBALS['unifiPass'].
+4) Edit guest/s/default/config.inc.php Unifi Controller options, database settings and $GLOBALS['sessionLogging'] with random string.
 
-5) Edit guest/s/default/config.inc.php database options. If you use mysql, set $GLOBALS['dbms']='mysql' and set $GLOBALS['mysqlServer'], $GLOBALS['mysqlUser'], $GLOBALS['mysqlPass'] and $GLOBALS['mysqlName']. If you use Sqlite3 database, set $GLOBALS['dbms']='sqlite3' and $GLOBALS['sqliteFile'] to hotspot.sqlite file.
+6) If you use mysql, import hotspot.sql file into database (you can use PhpMyAdmin). If you prefer sqlite, set $GLOBALS['dbms']='sqlite' and $GLOBALS['sqliteFile'] to hotspot.sqlite file.
 
-6) For mysql database import
-
+7) To set  
 ***
 
 ###LICENSE
