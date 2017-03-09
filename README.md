@@ -7,8 +7,6 @@ Works with Ubiquiti Unifi controller v4+
 NOTE: This captive portal actually works, but it's under development. There isn't a database backend yet.
 I'm coding a jquery-mobile backend for administrate database.
 
-##WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk, I'm not responsible!
-
 ###FEATURES
 - Mac address authentication for free limited-time wifi access;
 - Registered users authentication (support limited time login from single mac address only);
@@ -29,6 +27,8 @@ I'm coding a jquery-mobile backend for administrate database.
 - PhpMyAdmin or external database client for backend [OPTIONAL]
 
 ***
+
+##WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk, I'm not responsible!
 
 ###INSTALL 
 read INSTALL.txt file
