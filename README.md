@@ -28,7 +28,7 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ***
 
-##WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk, I'm not responsible!
+####WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk, I'm not responsible!
 
 ###INSTALL 
 read INSTALL.txt file
