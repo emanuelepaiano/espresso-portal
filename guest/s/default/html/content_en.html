@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Free WiFi</title>
+  <meta name="author" content="ema">
+ <!-- <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" /> -->
+  <link rel="stylesheet" type="text/css" media="all" href="html/css/style.css">
+ <!-- <link rel="stylesheet" type="text/css" media="all" href="responsive.css"> -->
+ <style>.error {color: #FF0000;}</style>
+    <script type="text/javascript" src="html/js/jquery.min.js"></script>
+  <script type="text/javascript" src="html/js/guest.js"></script>
+</head>
+
+<body>
+<div class="login-content content-box">
+     <div class="tou-box">
+          <form name="login" method="post" action="authorized.php">
+		     <section id="container">
+		        <div class="logo">
+			 	  
+			 	  
+			 	  <h2 id="top"><!--<img src="html/images/Logo.jpg">--></h2>
+			 	  <p class="info"><img src="html/images/wifi.png" width></p>
+			 	  
+		        </div>
+
+		       <p class="info"><br />
+		                          <div class="login_form">
+			                 	  <p class="form-element">
+			                 	        <label for="User" class="fieldname">Username</label>
+					                <input id="User" name="user" type="text" class="textInput" value="" autocomplete="off" />
+			                 	  </p>
+			                 	  <p class="form-element"> 
+					                <label for="Password" class="fieldname">Password&nbsp</label>
+					                <input id="Password" name="password" type="password" class="textInput" value="" autocomplete="off" />
+				                </p>
+				         </div>
+
+					<input type="hidden" name="id" value="<?php echo $id; ?>">
+					<input type="hidden" name="ap" value="<?php echo $ap; ?>">
+				</p>
+
+
+
+
+
+	 <div class="tou-box">
+				<!-- <h2>Terms of Use</h2> -->
+				<div class="tou-wrapper" id="tou">
+					<div class="tou">
+					<p class="info">Terms of Agreement</p>
+				<br>
+				
+												<ul><li>By accessing the wireless network, you acknowledge that you're of legal age, you have read and understood and agree to be bound by this agreement</li>
+													<li>The wireless network service is provided by the property owners and is completely at their discretion. Your access to the network may be blocked, suspended, or terminated at any time for any reason.</li>
+													<li>You agree not to use the wireless network for any purpose that is unlawful and take full responsibility of your acts.</li>
+													<li>The wireless network is provided &quot;as is&quot; without warranties of any kind, either expressed or implied. </li>
+													<li>We respect your privacy, we don't spy your activities, but we can't garantee security from hackers, virus, worms.</li>
+				</ul>
+					
+					</div>
+				</div>
+				
+				<div class="form-controls">
+					<!-- <input name="connect" type="submit" value="Connect" id="connect" class="button requires-tou" /> -->
+						<p class="info"><input class="requires-tou" id="submit" type="submit" name="submit" value="One Hour Free" onClick="this.form.submit(); this.disabled=true; this.value='Sending…'; "/><br></p>
+					<br>
+					
+		<p class="info">
+		        <font color="white" size="1"><b><a href="javascript:void(0)" id="login_show">Do you have an account?</a></b>
+		</font></p><br>
+		<hr><br><fieldset class="accept-tou">
+					<input id="accept-tou" type="checkbox" checked="checked" name="accept-tou" value="yes" />
+					<label class="normal" ><a href="javascript:void(0)" id="show-tou">I accept the Terms of Use</a></label>
+				</fieldset>
+					</div>
+
+
+			</div>
+		</form>
+		
+	</div>
+
+    </form>
+
+<script type="text/javascript">
+$(function() {
+	$('#tou').hide();
+	$('#show-tou').click(function() {
+		$('#tou').show();
+	});
+	$('#accept-tou').click(function() {
+		if (!$('#accept-tou').checked()) {
+			$('input.requires-tou').disable();
+		}
+		else {
+			$('input.requires-tou').enable();
+		}
+	})
+});
+
+$(function() {
+	$('.login_form').hide();
+	$('#login_show').click(function() {
+		$('.login_form').show();
+		$('#submit').val("Connect");
+		$('#login_show').hide();
+	});
+	
+});
+
+</script>
+<div id="footer">
+		<font color="white" size="2">
+		<b> Powered By Espresso Captive Portal</b>
+		</font>
+		</footer>
+</body>
+</html>
+

@@ -1,0 +1,133 @@
+/** basic default styles **/
+html { margin: 0; padding: 0; 
+background: #55504e url('../images/b4.jpg') no-repeat center center;
+    /* Ensure the html element always takes up the full height of the browser window */
+    min-height:100%;
+
+    /* The Magic */
+    background-size:cover;
+}
+
+body { 
+height: 101%; 
+font-size: 72.5%; 
+font-family: "Trebuchet MS", Arial, Tahoma, sans-serif; 
+color: #fff; 
+padding-top: 10px; 
+ min-height:100%;
+}
+
+#footer   {
+color: #ffffff;
+font-size: 14px;
+font-family: Verdana, Geneva, Arial, sans-serif;
+background-color: black;
+text-align: center;
+position:fixed;
+bottom: 0px;
+left: 0px;
+width: 100%;
+height: 20px
+}
+
+
+/* EMA code */
+
+.login_form{
+        padding-left:45px;
+        padding-bottom:10px;
+}
+
+.fieldname{
+        padding-left:5px;
+}
+
+input{
+ background: #d9cbc7;
+ color: #4e4745;
+}
+
+#submit {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 10px;
+  background: #4e4745;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+
+#submit:hover {
+  background: #888585;
+  text-decoration: none;
+}
+
+/* END EMA code*/
+
+
+
+a { color: #fff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h2#top { 
+border-bottom: 0px solid #ddd; 
+border-top: 1px solid #ddd;
+}
+
+h2 { 
+color: #fff;
+font-family: "Droid Serif", Georgia, serif; 
+font-size: 2.6em; 
+line-height: 1.8em; 
+font-weight: 500; 
+margin-top: 10px; 
+margin-bottom: 10px; 
+padding: 12px 0; 
+text-align: center; 
+}
+
+fieldset {border:none !important;}
+
+p.info {font-size:1.5em;margin:0 auto;text-align:center;}
+
+.accept-tou {text-align:center !important; margin:0 auto !important;}
+
+h3 {
+letter-spacing: -0.04em;
+font-weight: bold;
+font-size: 1.44em;
+margin-bottom: 10px;
+}
+
+span.chyron { font-size: 1.2em; padding-top: 10px; }
+
+/** main blocks **/
+#container { 
+display: block;
+max-width: 32em;
+margin: 0 auto; 
+margin-top: 5px; 
+margin-bottom: 66px;
+padding: 20px 15px; 
+background: rgba(56, 53, 52, 0.72);
+border-radius: 6px; 
+-webkit-border-radius: 6px; 
+-moz-border-radius: 6px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box; 
+box-sizing: border-box;  
+}
+
+
+/** the form elements **/
+#hongkiat-form { box-sizing: border-box; }
+
+
+/** @group clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

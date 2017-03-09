@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Free WiFi</title>
+  <meta name="author" content="ema">
+  <link rel="stylesheet" type="text/css" media="all" href="html/css/style.css">
+    <script type="text/javascript" src="html/js/jquery.min.js"></script>
+  <script type="text/javascript" src="html/js/guest.js"></script>
+</head>
+<body>
+<div class="login-content content-box">
+     <div class="tou-box">
+          <form name="login" action="authorized.php" method="post">
+		     <section id="container">
+		        <div class="logo">
+		                  <h2 id="top"><img src="html/images/Logo.png"></h2>
+			 	  <h2 id="top">Online</h2>
+		        </div>
+		        <p class="info">Remaining Time: <br><br>
+		                
+		                <span id="countdown">00 minutes e 00 seconds</span><br /><br />
+		                <a href="<?php echo $GLOBALS['successURL']; ?>" target="_blank" style="text-decoration: underline;">Start the surfing</a>
+				<div class="text">
+				<script type="text/javascript">
+
+function startTimer(duration, display) {
+    var start = Date.now(),
+        diff,
+        minutes,
+        seconds;
+    function timer() {
+        // get the number of seconds that have elapsed since 
+        // startTimer() was called
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+        if (diff > 0) {
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+
+        // does the same job as parseInt truncates the float
+        minutes = (diff / 60) | 0;
+        seconds = (diff % 60) | 0;
+        
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + " minuti " + seconds + " secondi "; 
+
+        if (diff <= 0) {
+            // add one second so that the count down starts at the full duration
+            // example 05:00 not 04:59
+            start = Date.now() + 1000;
+        }
+       }
+    };
+    // we don't want to wait a full second before the timer starts
+    timer();
+    setInterval(timer, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 *  <?php echo fakeTime($_SESSION['id']); ?>,
+        display = document.querySelector('#countdown');
+    startTimer(fiveMinutes, display);
+};
+
+</script>
+
+</div>
+				</p>
+		       <hr>
+
+			</div>
+
+		</form>
+	</div>
+
+    </form>
+	<div id="footer">
+		<font color="white" size="2">
+		<b> Powered By Espresso Captive Portal</b>
+		</font>
+		</footer>
+</body>
+</html>
