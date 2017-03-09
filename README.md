@@ -31,7 +31,7 @@ I'm coding a jquery-mobile backend for administrate database.
 ***
 
 ###INSTALL 
-read INSTALL.txt file
+read INSTALL.txt file (writing in progress)
 
 ***
 
