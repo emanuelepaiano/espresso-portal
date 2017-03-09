@@ -16,6 +16,7 @@ I'm coding a jquery-mobile backend for administrate database.
 - Blocking expired session's mac-address for minutes (or hours / days);
 - Multilanguage and language browser detection (italian/english);
 - Single customizable frontend theme.
+
 ***
 
 ##REQUIREMENTS:
@@ -25,6 +26,7 @@ I'm coding a jquery-mobile backend for administrate database.
 - Sqlite3 or Mysql 5.5 server
 - PHP 5.5 with mysql and/or sqlite3 PDO support 
 - PhpMyAdmin or external database client for backend [OPTIONAL]
+
 ***
 
 ###INSTALL: 
