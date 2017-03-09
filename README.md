@@ -1,3 +1,4 @@
+#ESPRESSO PHP PORTAL
 FreeWifi PHP Captive Portal, useful for builds coffee or restaurants free hotspots without pay external cloud services.
 Works with Ubiquiti Unifi controller v4+
 
@@ -7,7 +8,7 @@ WARNING:This captive portal actually works, but it's under development. There is
 
 I'm coding a jquery-mobile backend for administrate database.
 
-FEATURES:
+##FEATURES:
 - Mac address authentication for free limited-time wifi access;
 - Registered users authentication (support limited time login from single mac address only);
 - Remaining time counter for users (you can show them fake values, hiding minutes from 
@@ -16,7 +17,7 @@ FEATURES:
 - Multilanguage and language browser detection (italian/english);
 - Single customizable frontend theme.
 
-REQUIREMENTS:
+##REQUIREMENTS:
 
 - Ubiquiti Unifi Controller (tested on 4.8.20 version)
 - Linux Debian or Windows Lamp (tested on Debian and Raspbian 8)
@@ -25,16 +26,16 @@ REQUIREMENTS:
 - PHP 5.5 with mysql and/or sqlite3 PDO support 
 - PhpMyAdmin or external database client for backend [OPTIONAL]
 
-INSTALL: 
+##INSTALL: 
 read INSTALL.txt file
 
-AUTHOR:
+##AUTHOR:
 Emanuele Paiano - nixw0rm [at] gmail [dot] com
 
-LICENSE:
+##LICENSE:
 This tool is released under MIT License
 
-CREDITS:
+##CREDITS:
 This Captive Portal is based on
 - Medoo (http://medoo.in/)
 - class.unifi.it (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
