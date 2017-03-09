@@ -1,6 +1,6 @@
 FreeWifi PHP Portal for coffee or restaurants hotspot. Works with Ubiquiti Unifi controller
 
-![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/1.png)
+![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
 
 WARNING: THIS RELEASE RUNS GOOD, BUT IT'S A WORK IN PROGRESS (NO BACKEND - CLIENTS FRONTEND ONLY). 
 
