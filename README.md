@@ -20,7 +20,7 @@ REQUIREMENTS:
 - PHP 5.5 with mysql and/or sqlite3 PDO support 
 
 AUTHOR
-Emanuele Paiano - nixw0rm@gmail.com
+Emanuele Paiano - nixw0rm [at] gmail [dot] com
 
 LICENSE
 This tool is released under MIT License
