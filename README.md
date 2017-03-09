@@ -13,18 +13,22 @@ FEATURES:
 - Remaining time counter for users (you can show them fake values, hiding minutes from 
   remaining time);
 - Blocking expired session's mac-address for minutes (or hours / days);
-- Multilanguage and language browser probing (italian/english);
+- Multilanguage and language browser detection (italian/english);
 - Single customizable frontend theme.
 
 REQUIREMENTS:
 
 - Ubiquiti Unifi Controller (tested on 4.8.20 version)
 - Linux Debian or Windows Lamp (tested on Debian and Raspbian 8)
-- Nginx or Apache2 webserver
+- Nginx or Apache2 webserver with php enabled
 - Sqlite3 or Mysql 5.5 server
 - PHP 5.5 with mysql and/or sqlite3 PDO support 
 
 INSTALL:
+1) Prepare your system installing Nginx (or Apache2) with php and pdo database support and Sqlite3/Mysql.
+   Use google for tutorials about this.
+
+2) Set Espresso config file opening config.inc.php: [WRITING]
 
 
 
