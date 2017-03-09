@@ -31,20 +31,24 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ###INSTALL: 
 read INSTALL.txt file
+
 ***
 
 ###AUTHOR:
 Emanuele Paiano - nixw0rm [at] gmail [dot] com
+
 ***
 
 ###LICENSE:
 This tool is released under MIT License
+
 ***
 
 ###CREDITS:
 This Captive Portal is based on
 - Medoo (http://medoo.in/)
 - class.unifi.it (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
+
 ***
 
 ###SUPPORT ME:
