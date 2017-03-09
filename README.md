@@ -36,13 +36,13 @@ I'm coding a jquery-mobile backend for administrate database.
 
 2) Put guest/ directory into webserver root (like /var/www/html) and change permissions to access www-data webserver user;
 
-3) To increase security, move guest/s/default/db/hotspot.sqlite file to another path (like /var) inaccessible from web, but accessible from php;
+3) To increase security, move guest/s/default/db/hotspot.sqlite and hotspot.sql files to another path (like /var) inaccessible from web, but accessible from php;
 
 4) Edit guest/s/default/config.inc.php Unifi Controller options, database settings and $GLOBALS['sessionLogging'] with random string.
 
 6) If you use mysql, import hotspot.sql file into database (you can use PhpMyAdmin). If you prefer sqlite, set $GLOBALS['dbms']='sqlite' and $GLOBALS['sqliteFile'] to hotspot.sqlite file. For backend you can use sqliteweb (https://github.com/coleifer/sqlite-web). 
 
-7) Read DATABASE.TXT for tables description.
+7) Read DATABASE.TXT for tables description (writing in progress)
 
 ***
 
