@@ -40,9 +40,10 @@ I'm coding a jquery-mobile backend for administrate database.
 
 4) Edit guest/s/default/config.inc.php Unifi Controller options, database settings and $GLOBALS['sessionLogging'] with random string.
 
-6) If you use mysql, import hotspot.sql file into database (you can use PhpMyAdmin). If you prefer sqlite, set $GLOBALS['dbms']='sqlite' and $GLOBALS['sqliteFile'] to hotspot.sqlite file.
+6) If you use mysql, import hotspot.sql file into database (you can use PhpMyAdmin). If you prefer sqlite, set $GLOBALS['dbms']='sqlite' and $GLOBALS['sqliteFile'] to hotspot.sqlite file. For backend you can use sqliteweb (https://github.com/coleifer/sqlite-web). 
 
-7) To set  
+7) Read DATABASE.TXT for tables description.
+
 ***
 
 ###LICENSE
@@ -63,7 +64,7 @@ Emanuele Paiano - nixw0rm [at] gmail [dot] com
 ***
 
 ###SUPPORT ME
-If you like this project, consider a little donation! I need buy hardware for testing and development :)
+If you like this project, consider a little donation! I need buy hardware for testing and development. At least you can offer me a coffee.. :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/emanuelepaiano)
 
