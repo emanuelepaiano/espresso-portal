@@ -5,7 +5,7 @@ WARNING: THIS RELEASE RUNS GOOD, BUT IT'S A WORK IN PROGRESS (NO BACKEND - CLIEN
 I'm coding a jquery-mobile backend for administrate database.
 
 FEATURES:
-- Mac address authentication for free limited-time free wifi access
+- Mac address authentication for free limited-time wifi access
 - Registered users authentication (with limited time support and single mac-address logins)
 - Remaining time counter for users (and you can show them fake values, hiding minutes from 
   remaining time)
