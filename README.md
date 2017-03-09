@@ -50,6 +50,8 @@ This Captive Portal is based on
 ###SUPPORT ME:
 If you like this project, consider a little donation! I need buy hardware for testing and development :)
 
+***
+
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/emanuelepaiano)
 
 ***
