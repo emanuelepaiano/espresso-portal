@@ -1,17 +1,18 @@
-FreeWifi PHP Portal for coffee or restaurants hotspot. Works with Ubiquiti Unifi controller
+FreeWifi PHP Portal, useful for coffee or restaurants hotspot without external services (like Hotspotsystem or Wiiman).
+Works with Ubiquiti Unifi controller
 
 ![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
 
-WARNING: THIS RELEASE RUNS GOOD, BUT IT'S A WORK IN PROGRESS (NO BACKEND - CLIENTS FRONTEND ONLY). 
+WARNING:This captive portal actually works, but it's under development. There isn't a database backend yet.
 
 I'm coding a jquery-mobile backend for administrate database.
 
 FEATURES:
 - Mac address authentication for free limited-time wifi access
-- Registered users authentication (with limited time support and single mac-address logins)
-- Remaining time counter for users (and you can show them fake values, hiding minutes from 
+- Registered users authentication (support limited time login from single mac address only)
+- Remaining time counter for users (you can show them fake values, hiding minutes from 
   remaining time)
-- Block expired session's mac-address for minutes (or hours / days).
+- Blocking expired session's mac-address for minutes (or hours / days).
 
 REQUIREMENTS:
 
