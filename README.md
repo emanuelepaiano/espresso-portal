@@ -34,11 +34,6 @@ read INSTALL.txt file
 
 ***
 
-###AUTHOR:
-Emanuele Paiano - nixw0rm [at] gmail [dot] com
-
-***
-
 ###LICENSE:
 This tool is released under MIT License
 
@@ -48,6 +43,11 @@ This tool is released under MIT License
 This Captive Portal is based on
 - Medoo (http://medoo.in/)
 - class.unifi.it (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
+
+***
+
+###AUTHOR:
+Emanuele Paiano - nixw0rm [at] gmail [dot] com
 
 ***
 
