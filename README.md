@@ -37,4 +37,6 @@ This Captive Portal is based on
 - Medoo (http://medoo.in/)
 - class.unifi.it (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
 
+If you like this project, you can offer me a pizza :)
+
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/emanuelepaiano)
