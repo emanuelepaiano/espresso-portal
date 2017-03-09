@@ -24,13 +24,7 @@ REQUIREMENTS:
 - Sqlite3 or Mysql 5.5 server
 - PHP 5.5 with mysql and/or sqlite3 PDO support 
 
-INSTALL:
-1) Prepare your system installing Nginx (or Apache2) with php and pdo database support and Sqlite3/Mysql.
-   Use google for tutorials about this.
-
-2) Set Espresso config file opening config.inc.php: [WRITING]
-
-
+INSTALL: read INSTALL.txt file
 
 AUTHOR
 Emanuele Paiano - nixw0rm [at] gmail [dot] com
