@@ -23,6 +23,7 @@ REQUIREMENTS:
 - Nginx or Apache2 webserver with php enabled
 - Sqlite3 or Mysql 5.5 server
 - PHP 5.5 with mysql and/or sqlite3 PDO support 
+- PhpMyAdmin or external database client for backend [OPTIONAL]
 
 INSTALL: read INSTALL.txt file
 
