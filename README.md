@@ -24,7 +24,7 @@ AUTHOR
 Emanuele Paiano - nixw0rm@gmail.com
 
 LICENSE
-This is tool is released under MIT License
+This tool is released under MIT License
 
 CREDITS
 This Captive Portal is used with
