@@ -1,4 +1,4 @@
-FreeWifi PHP Portal, useful for coffee or restaurants hotspot without external services (like Hotspotsystem or Wiiman).
+FreeWifi PHP Captive Portal, useful for builds coffee or restaurants embedded Hotspots without external services.
 Works with Ubiquiti Unifi controller v4+
 
 ![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
