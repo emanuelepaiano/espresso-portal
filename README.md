@@ -58,7 +58,7 @@ This tool is released under MIT License
 ###CREDITS
 This Captive Portal is based on
 - Medoo (http://medoo.in/)
-- class.unifi.it (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
+- class.unifi.php (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
 
 ***
 
