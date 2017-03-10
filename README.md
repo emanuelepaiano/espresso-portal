@@ -4,14 +4,14 @@ Works with Ubiquiti Unifi controller v4+
 
 ![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
 
-NOTE: This captive portal actually works, but it's under development. There is a frontend only and
+NOTE: This captive portal actually works, but it's under development. There is only frontend and
 I'm coding a jquery-mobile backend for administrate database.
 
-####WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk, Install a logging system by yourself. I'm not responsible for law violations!
+####WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk. If required in your country, install a logging system by yourself. I'm not responsible for law violations!
 
 ###FEATURES
 - Mac address authentication for free limited-time wifi access;
-- Registered users authentication (support limited time login from single mac address only);
+- Registered users authentication (support limited time login from single mac address);
 - Remaining time counter for users (you can show them fake values, hiding minutes from 
   remaining time);
 - Blocking expired session's mac-address for minutes (or hours / days);
@@ -44,6 +44,10 @@ I'm coding a jquery-mobile backend for administrate database.
 
 7) Read DATABASE.TXT for tables description (writing in progress)
 
+8) Log in in Unifi Controller and set External Hotspot (from Guest Policies) to redirect to custom captive ip address.
+
+9) Enjoy
+
 ***
 
 ###LICENSE
@@ -67,7 +71,7 @@ Emanuele Paiano - nixw0rm [at] gmail [dot] com
 ***
 
 ###SUPPORT ME
-If you like this project, consider a little donation! I need buy hardware for testing and development. At least you can offer me a coffee.. :)
+If you like this project, consider a little donation, so I can buy new hardware for testing and development. At least you can offer me a coffee.. :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/emanuelepaiano)
 
