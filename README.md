@@ -7,9 +7,9 @@ Works with Ubiquiti Unifi controller v4+
 NOTE: This captive portal actually works, but it's under development. There is only frontend and
 I'm coding a jquery-mobile backend for administrate database.
 
-####WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk. If required in your country, install a logging system by yourself. I'm not responsible for law violations!
+#### WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk. If required in your country, install a logging system by yourself. I'm not responsible for law violations!
 
-###FEATURES
+### FEATURES
 - Mac address authentication for free limited-time wifi access;
 - Registered users authentication (support limited time login from single mac address);
 - Remaining time counter for users (you can show them fake values, hiding minutes from 
@@ -20,7 +20,7 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ***
 
-##REQUIREMENTS
+## REQUIREMENTS
 - Ubiquiti Unifi Controller (tested on 4.8.20 version)
 - Linux Debian or Windows Lamp (tested on Debian and Raspbian 8)
 - Nginx or Apache2 webserver with php enabled
@@ -30,7 +30,7 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ***
 
-###INSTALL 
+### INSTALL 
 
 1) Prepare your system installing the unifi controller, a web server (Nginx/Apache) with PHP/PDO and a DBMS (Mysql or Sqlite3);
 
@@ -50,27 +50,27 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ***
 
-###LICENSE
+### LICENSE
 This tool is released under MIT License
 
 ***
 
-###CREDITS
+### CREDITS
 This Captive Portal is based on
 - Medoo (http://medoo.in/)
 - class.unifi.php (https://github.com/malle-pietje/UniFi-API-browser/blob/master/phpapi/class.unifi.php)
 
 ***
 
-###FUTURE RELEASES
+### FUTURE RELEASES
 I'm working for mobile friendly backend and hotspot images runs on Raspberry Pi. 
 
-###AUTHOR
+### AUTHOR
 Emanuele Paiano - nixw0rm [at] gmail [dot] com
 
 ***
 
-###SUPPORT ME
+### SUPPORT ME
 If you like this project, consider a little donation, so I can buy new hardware for testing and development. At least you can offer me a coffee.. :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/emanuelepaiano)
