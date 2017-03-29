@@ -1,4 +1,4 @@
-# ESPRESSO PHP PORTAL v0.5
+# ESPRESSO PHP PORTAL v0.9
 FreeWifi PHP Captive Portal, useful for builds coffee or restaurants free hotspots without pay external cloud services.
 Works with Ubiquiti Unifi controller v4+
 
