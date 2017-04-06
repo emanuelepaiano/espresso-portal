@@ -63,7 +63,9 @@ This Captive Portal is based on
 ***
 
 ### FUTURE RELEASES
-I'm working for mobile friendly backend and hotspot images runs on Raspberry Pi. 
+I'm working for <a href="https://github.com/emanuelepaiano/espresso-admin/blob/master/README.md">mobile friendly backend</a> and hotspot images runs on Raspberry Pi. 
+
+![alt tag](https://github.com/emanuelepaiano/espresso-admin/blob/master/screenshots/dashboard.png)
 
 ### AUTHOR
 Emanuele Paiano - nixw0rm [at] gmail [dot] com
