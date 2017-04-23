@@ -543,9 +543,9 @@ function registerClient()
     
     echo $newId;
     
-    $sql="INSERT INTO " . $GLOBALS['mysqlSessionTable'] . " (id, device, ip, ap, lastlog, expire, remove, browser, os, user)
+    $sql="INSERT INTO " . $GLOBALS['mysqlSessionTable'] . " (id, device, ip, ap, lastlog, expire, remove, browser, os, user_id)
                 VALUES ($newId, '$id', '$ip', '$ap', '$datetime', '$to_time', '$unlock', '$userBrowser', '$userOS', '" . getUserVal($_SESSION["user"], "id") ."')";
-                
+                    
     $GLOBALS["database"]->insert($GLOBALS['mysqlSessionTable'], [
     
        "id"=>$newId,
@@ -566,7 +566,7 @@ function registerClient()
      
        "os"=>$userOS,
      
-       "user"=>getUserVal($_SESSION["user"], "id")
+       "user_id"=>getUserVal($_SESSION["user"], "id")
      
      ]);            
 
