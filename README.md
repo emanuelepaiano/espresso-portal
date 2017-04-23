@@ -63,7 +63,7 @@ This Captive Portal is based on
 ***
 
 ### FUTURE RELEASES
-I'm working for Linux ready hotspot distro with Espresso Frontend and Backend
+I'm working for Linux ready hotspot distro with Espresso Frontend and Espresso-Admin. Will be available for Raspberry Pi 2-3 and X86/x64 platforms.
 
 ![alt tag](https://github.com/emanuelepaiano/espresso-admin/blob/master/screenshots/1.png)
 
