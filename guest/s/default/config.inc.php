@@ -32,8 +32,8 @@ THE SOFTWARE.
 
 */
 
-// error_reporting(E_ALL);
-// ini_set('display_errors', '1');
+ //error_reporting(E_ALL);
+ //ini_set('display_errors', '1');
 
 
 
@@ -63,6 +63,19 @@ $GLOBALS['errorURL']='http://www.google.it';
 
 /* Redirect timeout promotionalURL */
 $GLOBALS['errorRedirect']=15;
+
+
+/* If true, guest user, must insert mail to starting surf */
+$GLOBALS['GuestMailAccess']=false;
+
+
+/* If true, show "Do you have an account?" on home */
+$GLOBALS['showHomeRegistered']=true;
+
+
+/* If true, all sessions will be logged into database table 
+   specified by $GLOBALS['LogSessionsTable'] */
+$GLOBALS['logAccessEnabled']=true;
 
 
 /* If true the portal will disconnect an expired guest from wifi after expired page loaded */
@@ -102,7 +115,7 @@ $GLOBALS['sqliteFile']='db/hotspot.sqlite';
 $GLOBALS['mysqlServer']= "localhost";
 
 /* Mysql User */
-$GLOBALS['mysqlUser']="user";
+$GLOBALS['mysqlUser']="mysql";
 
 /* Mysql Pass */
 $GLOBALS['mysqlPass']="password";
@@ -111,8 +124,11 @@ $GLOBALS['mysqlPass']="password";
 /* Mysql Database Name */
 $GLOBALS['mysqlName']="hotspot";
 
-/* Mysql Database Name */
+/* Mysql Session Table Name */
 $GLOBALS['mysqlSessionTable']="sessions";
+
+/* Mysql Log Session Table Name */
+$GLOBALS['LogSessionsTable']="access_logs";
         
 /* Mysql port */
 $GLOBALS['mysqlServerPort']=3306;

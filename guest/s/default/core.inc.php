@@ -541,10 +541,12 @@ function registerClient()
     
     $newId=$GLOBALS["database"]->max("sessions", "id")+1;
     
-    echo $newId;
+    $userMail=$_SESSION['email'];
+
+    //echo $newId;
     
-    $sql="INSERT INTO " . $GLOBALS['mysqlSessionTable'] . " (id, device, ip, ap, lastlog, expire, remove, browser, os, user_id)
-                VALUES ($newId, '$id', '$ip', '$ap', '$datetime', '$to_time', '$unlock', '$userBrowser', '$userOS', '" . getUserVal($_SESSION["user"], "id") ."')";
+    //$sql="INSERT INTO " . $GLOBALS['mysqlSessionTable'] . " (id, device, ip, ap, lastlog, expire, remove, browser, os, user_id)
+                //VALUES ($newId, '$id', '$ip', '$ap', '$datetime', '$to_time', '$unlock', '$userBrowser', '$userOS', '" . getUserVal($_SESSION["user"], "id") ."')";
                     
     $GLOBALS["database"]->insert($GLOBALS['mysqlSessionTable'], [
     
@@ -569,6 +571,36 @@ function registerClient()
        "user_id"=>getUserVal($_SESSION["user"], "id")
      
      ]);            
+
+
+    if ($GLOBALS['logAccessEnabled']){
+		$GLOBALS["database"]->insert($GLOBALS['LogSessionsTable'], [
+		
+		   "id"=>$newId,
+		
+		   "device"=>$id, 
+		
+		   "ip"=>$ip,
+		
+		   "ap"=>$ap,
+		
+		   "lastlog"=>$datetime, 
+		
+		   "expire"=>$to_time, 
+		
+		   "remove"=>$unlock,
+		 
+		   "browser"=>$userBrowser,
+		 
+		   "os"=>$userOS,
+
+		   "email"=>$userMail,
+		 
+		   "user_id"=>getUserVal($_SESSION["user"], "id")
+		 
+		 ]);
+	}
+
 
   }
   

@@ -27,7 +27,21 @@
 		        </div>
 
 		       <p class="info"><br />
+									
+									<?php if($GLOBALS['GuestMailAccess']){ ?>
+										<div style="padding-left: 50px">
+											
+											<p class="form-element"> 
+												<label for="Email" class="fieldname">Email&nbsp</label>
+												<input id="email" name="email" type="email" class="textInput" value="" autocomplete="off" required/>
+											</p>
+										</div>
+										<br>
+									<?php } ?>
+									
+
 		                          <div class="login_form">
+
 			                 	  <p class="form-element">
 			                 	        <label for="User" class="fieldname">Username</label>
 					                <input id="User" name="user" type="text" class="textInput" value="" autocomplete="off" />
@@ -36,6 +50,7 @@
 					                <label for="Password" class="fieldname">Password&nbsp</label>
 					                <input id="Password" name="password" type="password" class="textInput" value="" autocomplete="off" />
 				                </p>
+
 				         </div>
 
 					<input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -66,10 +81,12 @@
 					<!-- <input name="connect" type="submit" value="Connect" id="connect" class="button requires-tou" /> -->
 						<p class="info"><input class="requires-tou" id="submit" type="submit" name="submit" value="Naviga gratis per 1 ora" onClick="this.form.submit(); this.disabled=true; this.value='Sending…'; "/><br></p>
 					<br>
-					
-		<p class="info">
-		        <font color="white" size="1"><b><a href="javascript:void(0)" id="login_show">Sei registrato?</a></b>
-		</font></p><br>
+		<?php if($GLOBALS['showHomeRegistered']){ ?>		
+			<p class="info">
+				    <font color="white" size="1"><b><a href="javascript:void(0)" id="login_show">Sei registrato?</a></b>
+			</font></p><br>
+		<?php } ?>
+
 		<hr><br><fieldset class="accept-tou">
 					<input id="accept-tou" type="checkbox" checked="checked" name="accept-tou" value="yes" />
 					<label class="normal" ><a href="javascript:void(0)" id="show-tou">Accetto i termini di utilizzo del servizio</a></label>

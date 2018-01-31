@@ -27,6 +27,18 @@
 		        </div>
 
 		       <p class="info"><br />
+
+								<?php if($GLOBALS['GuestMailAccess']){ ?>
+									<div style="padding-left: 50px">
+										
+										<p class="form-element"> 
+											<label for="Email" class="fieldname">Email&nbsp</label>
+											<input id="email" name="email" type="email" class="textInput" value="" autocomplete="off" required/>
+										</p>
+									</div>
+									<br>
+								<?php } ?>
+
 		                          <div class="login_form">
 			                 	  <p class="form-element">
 			                 	        <label for="User" class="fieldname">Username</label>
@@ -69,7 +81,11 @@
 					<br>
 					
 		<p class="info">
-		        <font color="white" size="1"><b><a href="javascript:void(0)" id="login_show">Do you have an account?</a></b>
+		        <?php if($GLOBALS['showHomeRegistered']){ ?>		
+					<p class="info">
+							<font color="white" size="1"><b><a href="javascript:void(0)" id="login_show">Do you have an account?</a></b>
+					</font></p><br>
+				<?php } ?>
 		</font></p><br>
 		<hr><br><fieldset class="accept-tou">
 					<input id="accept-tou" type="checkbox" checked="checked" name="accept-tou" value="yes" />

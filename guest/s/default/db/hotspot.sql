@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.12deb2+deb8u2
+-- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 22, 2017 alle 17:34
--- Versione del server: 5.5.54-0+deb8u1
--- PHP Version: 5.6.30-0+deb8u1
+-- Creato il: Gen 31, 2018 alle 23:11
+-- Versione del server: 5.7.21-0ubuntu0.16.04.1
+-- Versione PHP: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,11 +14,31 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hotspot_backend`
+-- Database: `hotspot`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `access_logs`
+--
+
+CREATE TABLE `access_logs` (
+  `id` int(11) NOT NULL,
+  `device` varchar(17) NOT NULL,
+  `ip` varchar(15) NOT NULL,
+  `ap` varchar(17) NOT NULL,
+  `lastlog` datetime NOT NULL,
+  `expire` datetime NOT NULL,
+  `remove` datetime NOT NULL,
+  `browser` varchar(254) NOT NULL,
+  `os` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -26,14 +46,14 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `administrators`
 --
 
-CREATE TABLE IF NOT EXISTS `administrators` (
-`id` int(11) NOT NULL,
+CREATE TABLE `administrators` (
+  `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
   `email` varchar(150) NOT NULL,
   `password` varchar(128) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `administrators`
@@ -48,8 +68,8 @@ INSERT INTO `administrators` (`id`, `name`, `email`, `password`, `created`, `mod
 -- Struttura della tabella `groups`
 --
 
-CREATE TABLE IF NOT EXISTS `groups` (
-`id` int(11) NOT NULL,
+CREATE TABLE `groups` (
+  `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `minutes` int(5) NOT NULL,
   `blockInterval` int(5) NOT NULL,
@@ -57,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
   `upload` int(11) NOT NULL,
   `download` int(11) NOT NULL,
   `quota` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `groups`
@@ -73,8 +93,8 @@ INSERT INTO `groups` (`id`, `name`, `minutes`, `blockInterval`, `fakeminutesoffs
 -- Struttura della tabella `sessions`
 --
 
-CREATE TABLE IF NOT EXISTS `sessions` (
-`id` int(11) NOT NULL,
+CREATE TABLE `sessions` (
+  `id` int(11) NOT NULL,
   `device` varchar(17) NOT NULL,
   `ip` varchar(15) NOT NULL,
   `ap` varchar(17) NOT NULL,
@@ -84,14 +104,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `browser` varchar(254) NOT NULL,
   `os` varchar(50) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `sessions`
---
-
-INSERT INTO `sessions` (`id`, `device`, `ip`, `ap`, `lastlog`, `expire`, `remove`, `browser`, `os`, `user_id`) VALUES
-(5, 'Test Session', '192.168.1.1', '192.168.2.65', '2017-03-09 10:00:00', '2017-03-23 10:04:00', '2018-06-26 00:12:00', 'Firefox', 'Linux', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -99,8 +112,8 @@ INSERT INTO `sessions` (`id`, `device`, `ip`, `ap`, `lastlog`, `expire`, `remove
 -- Struttura della tabella `settings`
 --
 
-CREATE TABLE IF NOT EXISTS `settings` (
-`id` int(11) NOT NULL,
+CREATE TABLE `settings` (
+  `id` int(11) NOT NULL,
   `param` varchar(20) NOT NULL,
   `value` varchar(50) NOT NULL,
   `note` varchar(50) NOT NULL
@@ -112,8 +125,8 @@ CREATE TABLE IF NOT EXISTS `settings` (
 -- Struttura della tabella `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
-`id` int(11) NOT NULL,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(128) NOT NULL,
   `device` varchar(17) DEFAULT NULL,
@@ -121,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `enabled` tinyint(1) NOT NULL DEFAULT '1',
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `users`
@@ -132,68 +145,83 @@ INSERT INTO `users` (`id`, `username`, `password`, `device`, `group_id`, `enable
 (2, 'guest', 'password', 'ignore', 3, 1, '2017-03-20 12:13:38', '2017-04-10 15:49:30');
 
 --
--- Indexes for dumped tables
+-- Indici per le tabelle scaricate
 --
 
 --
--- Indexes for table `administrators`
+-- Indici per le tabelle `access_logs`
+--
+ALTER TABLE `access_logs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indici per le tabelle `administrators`
 --
 ALTER TABLE `administrators`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `groups`
+-- Indici per le tabelle `groups`
 --
 ALTER TABLE `groups`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sessions`
+-- Indici per le tabelle `sessions`
 --
 ALTER TABLE `sessions`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `device` (`device`), ADD KEY `user_key` (`user_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `device` (`device`),
+  ADD KEY `user_key` (`user_id`);
 
 --
--- Indexes for table `settings`
+-- Indici per le tabelle `settings`
 --
 ALTER TABLE `settings`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indici per le tabelle `users`
 --
 ALTER TABLE `users`
- ADD PRIMARY KEY (`id`), ADD KEY `group_key` (`group_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `group_key` (`group_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT per le tabelle scaricate
 --
 
 --
--- AUTO_INCREMENT for table `administrators`
+-- AUTO_INCREMENT per la tabella `access_logs`
+--
+ALTER TABLE `access_logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT per la tabella `administrators`
 --
 ALTER TABLE `administrators`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT for table `groups`
+-- AUTO_INCREMENT per la tabella `groups`
 --
 ALTER TABLE `groups`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `sessions`
+-- AUTO_INCREMENT per la tabella `sessions`
 --
 ALTER TABLE `sessions`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `settings`
+-- AUTO_INCREMENT per la tabella `settings`
 --
 ALTER TABLE `settings`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT per la tabella `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Limiti per le tabelle scaricate
 --
@@ -202,13 +230,13 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- Limiti per la tabella `sessions`
 --
 ALTER TABLE `sessions`
-ADD CONSTRAINT `sessions_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `sessions_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Limiti per la tabella `users`
 --
 ALTER TABLE `users`
-ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`);
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

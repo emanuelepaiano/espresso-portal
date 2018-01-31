@@ -10,13 +10,16 @@ I'm coding a jquery-mobile backend for administrate database.
 #### WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk. If required in your country, install a logging system by yourself. I'm not responsible for law violations!
 
 ### FEATURES
-- Mac address authentication for free limited-time wifi access;
+- Mac address/email authentication for free limited-time wifi access;
 - Registered users authentication (support limited time login from single mac address);
 - Remaining time counter for users (you can show them fake values, hiding minutes from 
   remaining time);
 - Blocking expired session's mac-address for minutes (or hours / days);
 - Multilanguage and language browser detection (italian/english);
 - Single customizable frontend theme.
+- Mail login supports for guests, with logging useful for signing up to newsletters - NEW
+- Disabling registered users login (set hotspot for guests only) - NEW
+- Permanent login support - NEW
 
 ***
 
@@ -32,7 +35,7 @@ I'm coding a jquery-mobile backend for administrate database.
 
 ### INSTALL 
 
-1) Prepare your system installing the unifi controller, a web server (Nginx/Apache) with PHP/PDO and a DBMS (Mysql or Sqlite3);
+1) Prepare your system installing the unifi controller, a web server (Nginx/Apache) with PHP/PDO CURL and a DBMS (Mysql or Sqlite3);
 
 2) Put guest/ directory into webserver root (like /var/www/html) and change permissions to access www-data webserver user;
 
@@ -42,11 +45,15 @@ I'm coding a jquery-mobile backend for administrate database.
 
 6) If you use mysql, import hotspot.sql file into database (you can use PhpMyAdmin). If you prefer sqlite, set $GLOBALS['dbms']='sqlite' and $GLOBALS['sqliteFile'] to hotspot.sqlite file. For backend you can use sqliteweb (https://github.com/coleifer/sqlite-web). 
 
-7) Read DATABASE.TXT for tables description (writing in progress)
+7) Log in in Unifi Controller and set External Hotspot (from Guest Policies) to redirect to custom captive ip address.
 
-8) Log in in Unifi Controller and set External Hotspot (from Guest Policies) to redirect to custom captive ip address.
+8) All access will be logged into access_logs database table (set $GLOBALS['logAccessEnabled']) to false for disabling logging)
 
-9) Enjoy
+9) Set $GLOBALS['GuestMailAccess'] to true to enable guest authentication by email address (useful for signing up to newsletter)
+
+10) Set $GLOBALS['showHomeRegistered'] to false to hide disable registered accounts (guest only)
+
+11) Enjoy
 
 ***
 

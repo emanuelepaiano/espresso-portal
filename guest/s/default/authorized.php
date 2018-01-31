@@ -41,6 +41,12 @@ session_start();
 
 /* Filtering user and password for SQL Injection attacks */
 
+if ($_POST["email"]!="") 
+        $_SESSION["email"]=escape_sql($_POST["email"]);
+else 
+        $_SESSION["email"]=" ";
+
+
 if ($_POST["user"]!="") 
         $_SESSION["user"]=escape_sql($_POST["user"]);
 else 
