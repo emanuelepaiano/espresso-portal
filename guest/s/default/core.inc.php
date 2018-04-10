@@ -550,7 +550,7 @@ function registerClient()
                     
     $GLOBALS["database"]->insert($GLOBALS['mysqlSessionTable'], [
     
-       "id"=>$newId,
+       //"id"=>$newId,
     
        "device"=>$id, 
     
@@ -576,7 +576,7 @@ function registerClient()
     if ($GLOBALS['logAccessEnabled']){
 		$GLOBALS["database"]->insert($GLOBALS['LogSessionsTable'], [
 		
-		   "id"=>$newId,
+		   //"id"=>$newId,
 		
 		   "device"=>$id, 
 		
