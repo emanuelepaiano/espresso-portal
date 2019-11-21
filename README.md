@@ -2,9 +2,10 @@
 FreeWifi PHP Captive Portal, useful for builds coffee or restaurants free hotspots without pay external cloud services.
 Works with Ubiquiti Unifi controller v4.X and v5.X
 
-![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
-
 <p><b>NOTE: this version is obsolete. I'm working for Springboot/Angular based version, with microservices and monolithic versions (this will contain Espresso Admin and Espresso Portal in a single package) </b></p>
+
+
+![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
 
 #### WARNING: Some countries' laws, require a logging data for guests activities from wifi hotspots. This tool does not collect any data or logs, so use it at your risk. If required in your country, install a logging system by yourself. I'm not responsible for law violations!
 
