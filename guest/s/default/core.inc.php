@@ -184,7 +184,7 @@ function authorizeGuest($id, $minutes, $download=NULL, $upload=NULL, $quota=NULL
         
         if ($quota==NULL) $quota=$GLOBALS['quota'];
         
-        $ubnController=new unifiapi;
+        $ubnController=new Client;
 
         $ubnController->user=$GLOBALS['unifiUser'];
 
@@ -243,7 +243,7 @@ function curPageURL() {
 /* Disconnect Client */
 function unauthorize_guest($id)
 {
-  $ubnController=new unifiapi;
+  $ubnController=new Client;
 
   $ubnController->user=$GLOBALS['unifiUser'];
 
