@@ -1,7 +1,9 @@
 # ESPRESSO PHP PORTAL v0.9
 FreeWifi PHP Captive Portal, useful for builds coffee or restaurants free hotspots without pay external cloud services.
 Works with Ubiquiti Unifi controller v4.X and v5.X
-<p><b>NOTE: I'm working for new Springboot/Angular implementation, with microservices and monolithic versions (this will contain Espresso Admin and Espresso Portal in a single package) </b></p>
+
+<b style="color: red">NB: This project has been deprecated. It's works anyway, but I suggest you to take a look to a modern springboot reimplementation
+  qith embedded webserver: <a href="https://emanuelepaiano.github.io/jespresso/index.html">jEspresso Guest Portal</a></b>
 
 ![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/screenshots/en.png)
 
